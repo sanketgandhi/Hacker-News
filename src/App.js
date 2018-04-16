@@ -34,7 +34,10 @@ class App extends Component {
 	}
 
 	onDismiss(id) {
-		console.log("awesome");
+		console.log("awesome ", id);
+
+		const updatedList = this.state.list.filter(item => item.objectID != id);
+		this.setState({ list: updatedList });
 	}
 
 	render() {
@@ -53,7 +56,9 @@ class App extends Component {
 							<button
 								type="button"
 								onClick={() => this.onDismiss(item.objectID)}
-							/>
+							>
+								Dismiss
+							</button>
 						</span>
 					</div>
 				))}
