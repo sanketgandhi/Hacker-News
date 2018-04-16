@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import ExplainBinding from "./ExplainBinding.jsx";
 
 const list = [
 	{
@@ -60,6 +61,7 @@ class App extends Component {
 								Dismiss
 							</button>
 						</span>
+						<ExplainBinding />
 					</div>
 				))}
 			</div>
